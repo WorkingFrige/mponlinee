@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles/nullstyle.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/media.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.8/dist/inputmask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="scripts/app.js" defer></script>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="header__container">
+            <a href="/" class="header__logo">
+                <img src="img/logo_black.svg" alt="Логотип">
+            </a>
+            <nav class="header__nav" id="nav">
+                <ul class="header__list">
+                    <li class="header__list-item"><a data-goto=".advantages" href="#">О курсе</a></li>
+                    <li class="header__list-item"><a data-goto=".cases" href="#">Наши кейсы</a></li>
+                    <li class="header__list-item"><a data-goto=".program" href="#">Программа</a></li>
+                    <li class="header__list-item"><a data-goto=".prices" href="#">Тарифы</a></li>
+                    <li class="header__list-item">
+                        <button data-open=".callback">Позвоните мне</button>
+                    </li>
+                </ul>
+                <div class="header__nav-background" id="burgerBg"></div>
+            </nav>
+            <button class="header__burger burger" id="burger">
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <main class="main">
+        <section class="promo">
+            <div class="promo__container">
+                <div class="promo__content">
+                    <h1 class="promo__title"><span class="blue">Открытие и продвижение</span> вашего магазина на
+                        маркетплейсах</h1>
+                    <ul class="promo__list">
+                        <li class="promo__list-item">Профессиональный подбор и анализ товара</li>
+                        <li class="promo__list-item">Вывод на маркетплейсы под ключ</li>
+                        <li class="promo__list-item">Продвижение существующего товара</li>
+                    </ul>
+                    <a data-goto=".program" href="#" class="promo__btn">Программа и тарифы</a>
+                </div>
+                <div class="promo__imgs">
+                    <img src="img/promo/wildberries.svg" alt="Wildberries">
+                    <img src="img/promo/ozon.svg" alt="Ozon">
+                </div>
+            </div>
+            <div class="promo__background">
+                <img src="img/promo/background.webp" alt>
+            </div>
+        </section>
+        <section class="advantages">
+            <div class="advantages__container">
+                <div class="advantages__item">
+                    <img src="img/advantages/growth.svg" class="advantages__item-img" alt>
+                    <p class="advantages__item-text">Запуск магазина и бренда <span class="blue">от 10 дней</span></p>
+                </div>
+                <div class="advantages__item">
+                    <img src="img/advantages/education.svg" class="advantages__item-img" alt>
+                    <p class="advantages__item-text"><span
+                        class="blue">Полное обучение</span> по работе с МП + сопровождение</p>
+                </div>
+                <div class="advantages__item">
+                    <img src="img/advantages/money.svg" class="advantages__item-img" alt>
+                    <p class="advantages__item-text">Вложения: <span class="blue">от 45.000₽</span> на старте</p>
+                </div>
+            </div>
+        </section>
+        <section class="for">
+            <div class="for__container">
+                <h2 class="for__title">Кому подойдут наши услуги</h2>
+                <div class="for__items">
+                    <div class="for__items-element for__item">
+                        <img src="img/for/junior.svg" alt class="for__item-img">
+                        <h4 class="for__item-title">Начинающий селлер</h4>
+                        <ul class="for__item-list">
+                            <li class="for__item-list_item">Не знаете где взять товар и что будет продаваться</li>
+                            <li class="for__item-list_item">Не знаете, как обеспечить себе органические продажи и
+                                снизить издержки на продвижение
+                            </li>
+                            <li class="for__item-list_item">Мечтаете быстро отбить вложения и выйти в прибыль</li>
+                            <li class="for__item-list_item">Хотите начать бизнес без ошибок</li>
+                        </ul>
+                    </div>
+                    <div class="for__items-element for__item">
+                        <img src="img/for/middle.svg" alt class="for__item-img">
+                        <h4 class="for__item-title">Действующий селлер</h4>
+                        <ul class="for__item-list">
+                            <li class="for__item-list_item">У вас есть товар, но вы не знаете как его продавать на МП
+                            </li>
+                            <li class="for__item-list_item">Не понимаете с чего начать на ВБ, Озон или Яндекс.Маркет
+                            </li>
+                            <li class="for__item-list_item">Хотите оптимизировать затраты на логистику и хранение
+                                товара
+                            </li>
+                            <li class="for__item-list_item">Хотите эффективно продавать на МП</li>
+                        </ul>
+                    </div>
+                    <div class="for__items-element for__item">
+                        <img src="img/for/senior.svg" alt class="for__item-img">
+                        <h4 class="for__item-title">Опытный селлер</h4>
+                        <ul class="for__item-list">
+                            <li class="for__item-list_item">Устали тратить свое время на операционку (рутинные
+                                задачи)
+                            </li>
+                            <li class="for__item-list_item">Хотите быть в тренде обновлений МП</li>
+                            <li class="for__item-list_item">Хотите выявить и устранить ошибки вашей работы на МП</li>
+                            <li class="for__item-list_item">Испробовали все, но не знаете, как выделиться среди
+                                конкурентов
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="after">
+            <div class="after__container">
+                <h3 class="after__title">После сотрудничества с нами вы научитесь</h3>
+                <ul class="after__list">
+                    <li class="after__list-item">Самостоятельно анализировать ниши и подбирать товар для продажи</li>
+                    <li class="after__list-item">Планировать бюджет и прибыль каждого нового товара</li>
+                    <li class="after__list-item">Выкладывать новые карточки товаров с минимальными вложениями</li>
+                    <li class="after__list-item">Выбирать поставщиков</li>
+                    <li class="after__list-item">Создавать качественный контент, интересный клиентам и хорошо
+                        сканируемый поисковыми системами
+                    </li>
+                </ul>
+                <h4 class="after__subtitle">Каждый наш урок будет записан и отправлен вам для возможности повторного
+                    просмотра.</h4>
+            </div>
+        </section>
+        <section class="cases">
+            <div class="cases__container">
+                <div class="cases__top">
+                    <h2 class="cases__top-title">Примеры наших работ</h2>
+                    <div class="cases__top-btns">
+                        <button class="swiper-button-prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="57" height="57" viewBox="0 0 57 57"
+                                 fill="none">
+                                <circle cx="28.4456" cy="28.7727" r="27.9255" transform="rotate(180 28.4456 28.7727)"
+                                        fill="#E2E9F3"/>
+                                <path
+                                    d="M40.0811 29.936C40.7237 29.936 41.2446 29.4151 41.2446 28.7725C41.2446 28.1298 40.7237 27.6089 40.0811 27.6089L40.0811 29.936ZM15.987 27.9497C15.5326 28.4041 15.5326 29.1408 15.987 29.5952L23.3919 37.0001C23.8463 37.4545 24.583 37.4545 25.0374 37.0001C25.4918 36.5457 25.4918 35.809 25.0374 35.3546L18.4553 28.7725L25.0374 22.1904C25.4918 21.736 25.4918 20.9992 25.0374 20.5448C24.583 20.0904 23.8463 20.0904 23.3919 20.5448L15.987 27.9497ZM40.0811 27.6089L16.8098 27.6089L16.8098 29.936L40.0811 29.936L40.0811 27.6089Z"
+                                    fill="#373E40"/>
+                            </svg>
+                        </button>
+                        <button class="swiper-button-next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="57" height="57" viewBox="0 0 57 57"
+                                 fill="none">
+                                <circle cx="28.156" cy="28.7722" r="27.9255" fill="#E2E9F3"/>
+                                <path
+                                    d="M16.5205 27.6084C15.8779 27.6084 15.3569 28.1294 15.3569 28.772C15.3569 29.4146 15.8779 29.9355 16.5205 29.9355L16.5205 27.6084ZM40.6145 29.5947C41.0689 29.1403 41.0689 28.4036 40.6145 27.9492L33.2097 20.5443C32.7553 20.0899 32.0185 20.0899 31.5641 20.5443C31.1097 20.9987 31.1097 21.7355 31.5641 22.1899L38.1462 28.772L31.5641 35.3541C31.1097 35.8085 31.1097 36.5452 31.5641 36.9996C32.0185 37.454 32.7553 37.454 33.2097 36.9996L40.6145 29.5947ZM16.5205 29.9355L39.7918 29.9355L39.7918 27.6084L16.5205 27.6084L16.5205 29.9355Z"
+                                    fill="#373E40"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide__container">
+                            <div class="slide__content">
+                                <div class="slide__top">
+                                    <div class="slide__top-left">
+                                        <img src="img/cases/case-1.jpg" alt="Фото клиента" class="slide__top-img">
+                                        <h5 class="slide__top-title">Юрий Серегин</h5>
+                                    </div>
+                                    <p class="slide__top-text">Одежда, сезонный товар</p>
+                                </div>
+                                <div class="slide__content-item"><strong>Бюджет на закупку и продвижение товара</strong>
+                                    <p>1 000 000 рублей</p></div>
+                                <div class="slide__content-item"><strong>Продажи за 5 месяцев</strong>
+                                    <p>2 818 235 рублей</p></div>
+                                <div class="slide__content-item"><strong>Закупка</strong>
+                                    <p>Киргизия</p></div>
+                                <div class="slide__content-item"><strong>Окупаемость</strong>
+                                    <p>5 месяцев</p></div>
+                                <div class="slide__content-item"><strong>Результат работы</strong>
+                                    <p>Вышли на 360.000 чистой прибыли в месяц. Рентабельность 36%</p></div>
+                            </div>
+                            <button data-open=".callback" class="slide__btn">Хочу также</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide__container">
+                            <div class="slide__content">
+                                <div class="slide__top">
+                                    <div class="slide__top-left">
+                                        <img src="img/cases/case-2.jpg" alt="Фото клиента" class="slide__top-img">
+                                        <h5 class="slide__top-title">Денис Мартьянов</h5>
+                                    </div>
+                                    <p class="slide__top-text">Ортопедические товары, зоотовары</p>
+                                </div>
+                                <div class="slide__content-item"><strong>Бюджет на закупку и продвижение товара</strong>
+                                    <p>200 000 рублей</p></div>
+                                <div class="slide__content-item"><strong>Продажи за 4 месяца</strong>
+                                    <p>955 769 рублей</p></div>
+                                <div class="slide__content-item"><strong>Закупка</strong>
+                                    <p>РФ</p></div>
+                                <div class="slide__content-item"><strong>Окупаемость</strong>
+                                    <p>3 месяца</p></div>
+                                <div class="slide__content-item"><strong>Результат работы</strong>
+                                    <p>спустя 4 месяца вышли на 150 000 прибыли в месяц, рентабельность более 29%</p>
+                                </div>
+                            </div>
+                            <button data-open=".callback" class="slide__btn">Хочу также</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide__container">
+                            <div class="slide__content">
+                                <div class="slide__top">
+                                    <div class="slide__top-left">
+                                        <img src="img/cases/case-3.jpg" alt="Фото клиента" class="slide__top-img">
+                                        <h5 class="slide__top-title">Артем Кудряшов</h5>
+                                    </div>
+                                    <p class="slide__top-text">Электроника, видеонаблюдение</p>
+                                </div>
+                                <div class="slide__content-item"><strong>Бюджет на закупку и продвижение товара</strong>
+                                    <p> 40 000 , брал товар под реализацию у поставщика</p></div>
+                                <div class="slide__content-item"><strong>Продажи за 4 месяца</strong>
+                                    <p>955 769 рублей</p></div>
+                                <div class="slide__content-item"><strong>Закупка</strong>
+                                    <p>РФ</p></div>
+                                <div class="slide__content-item"><strong>Окупаемость</strong>
+                                    <p>2 месяца</p></div>
+                                <div class="slide__content-item"><strong>Результат работы</strong>
+                                    <p>Cпустя 4 месяца вышли на 70.000 чистой прибыли в месяц, рентабельность более 40%.
+                                        <br>За 4 месяца совместной работы чистая прибыль составила более 200.000 рублей
+                                    </p>
+                                </div>
+                            </div>
+                            <button data-open=".callback" class="slide__btn">Хочу также</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide__container">
+                            <div class="slide__content">
+                                <div class="slide__top">
+                                    <div class="slide__top-left">
+                                        <img src="img/cases/case-4.jpg" alt="Фото клиента" class="slide__top-img">
+                                        <h5 class="slide__top-title">Егор Лапин</h5>
+                                    </div>
+                                    <p class="slide__top-text">18+, Электроника</p>
+                                </div>
+                                <div class="slide__content-item"><strong>Бюджет на закупку и продвижение товара</strong>
+                                    <p>1 000 000 рублей</p></div>
+                                <div class="slide__content-item"><strong>Продажи за 5 месяцев</strong>
+                                    <p>300 000 рублей</p></div>
+                                <div class="slide__content-item"><strong>Закупка</strong>
+                                    <p>Китай</p></div>
+                                <div class="slide__content-item"><strong>Окупаемость</strong>
+                                    <p>4 месяца</p></div>
+                                <div class="slide__content-item"><strong>Результат работы</strong>
+                                    <p>Вышли на 200 000 чистой прибыли. Рентабельность 33%</p></div>
+                            </div>
+                            <button data-open=".callback" class="slide__btn">Хочу также</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide__container">
+                            <div class="slide__content">
+                                <div class="slide__top">
+                                    <div class="slide__top-left">
+                                        <img src="img/cases/case-5.jpg" alt="Фото клиента" class="slide__top-img">
+                                        <h5 class="slide__top-title">Наталья Журавкова</h5>
+                                    </div>
+                                    <p class="slide__top-text">Товары для дома</p>
+                                </div>
+                                <div class="slide__content-item"><strong>Бюджет на закупку и продвижение товара</strong>
+                                    <p>120 000 рублей</p></div>
+                                <div class="slide__content-item"><strong>Продажи за 3 месяца</strong>
+                                    <p>507 059 рублей</p></div>
+                                <div class="slide__content-item"><strong>Закупка</strong>
+                                    <p>РФ</p></div>
+                                <div class="slide__content-item"><strong>Окупаемость</strong>
+                                    <p>3 месяца</p></div>
+                                <div class="slide__content-item"><strong>Результат работы</strong>
+                                    <p>вышли на 80.000 чистой прибыли, рентабельность 22%</p></div>
+                            </div>
+                            <button data-open=".callback" class="slide__btn">Хочу также</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide__container">
+                            <div class="slide__content">
+                                <div class="slide__top">
+                                    <div class="slide__top-left">
+                                        <img src="img/cases/case-6.jpg" alt="Фото клиента" class="slide__top-img">
+                                        <h5 class="slide__top-title">Павел Николаев</h5>
+                                    </div>
+                                    <p class="slide__top-text">Одежда, Сезонный товар</p>
+                                </div>
+                                <div class="slide__content-item"><strong>Бюджет на закупку и продвижение товара</strong>
+                                    <p>650 000 рублей</p></div>
+                                <div class="slide__content-item"><strong>Продажи за 4 месяца</strong>
+                                    <p>2 023 991 рублей</p></div>
+                                <div class="slide__content-item"><strong>Закупка</strong>
+                                    <p>Китай</p></div>
+                                <div class="slide__content-item"><strong>Окупаемость</strong>
+                                    <p>4 месяца</p></div>
+                                <div class="slide__content-item"><strong>Результат работы</strong>
+                                    <p>Результат работы - вышли на 370.000 чистой прибыли. Рентабельность 39%</p></div>
+                            </div>
+                            <button data-open=".callback" class="slide__btn">Хочу также</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="program">
+            <div class="program__container">
+                <h2 class="program__title">Программа курса</h2>
+                <h6 class="program__subtitle"><span class="blue">Старт продаж от 10 дней</span></h6>
+                <div class="program__content">
+                    <div class="program__content-item program__item">
+                        <h4 class="program__item-background">01</h4>
+                        <h4 class="program__item-title">Регистрация ИП<br>Регистрация на площадке</h4>
+                        <p class="program__item-text">На каждой площадке есть особенности работы, выбираем наиболее
+                            подходящий маркетплейс или несколько сразу.
+                            <br> Выбираем FBO или FBS</p>
+                    </div>
+                    <div class="program__content-item program__item">
+                        <h4 class="program__item-background">02</h4>
+                        <h4 class="program__item-title">Выбор площадки для начала работы</h4>
+                        <p class="program__item-text">Помогаем зарегистрироваться на маркетплейсе и выбрать банк для
+                            работы с МП
+                            <br>
+                            Создаем общий чат и отвечаем на все вопросы</p>
+                    </div>
+                    <div class="program__content-item program__item">
+                        <h4 class="program__item-background">03</h4>
+                        <h4 class="program__item-title">Подбираем и согласовываем товар для продажи</h4>
+                        <p class="program__item-text">Анализируем спрос на товар, ищем поставщика, рассчитываем прибыль,
+                            формируем экономическую модель, параллельно обучаем вас каждому шагу</p>
+                    </div>
+                    <div class="program__content-item program__item">
+                        <h4 class="program__item-background">04</h4>
+                        <h4 class="program__item-title">Оформление магазина</h4>
+                        <p class="program__item-text">Закупаем товар, оформляем карточки товара, упаковываем и маркируем
+                            первую партию, делаем поставку на склад. Параллельно показываем и рассказываем каждый
+                            шаг</p>
+                    </div>
+                    <div class="program__content-item program__item">
+                        <h4 class="program__item-background">05</h4>
+                        <h4 class="program__item-title">Самовыкупы</h4>
+                        <p class="program__item-text">Организовываем безопасные и дешевые самовыкупы, пишем отзывы и
+                            положительные оценка на товар, поднимаем карточку на ТОП позиции</p>
+                    </div>
+                    <div class="program__content-item program__item">
+                        <h4 class="program__item-background">06</h4>
+                        <h4 class="program__item-title">Запускаем рекламу</h4>
+                        <p class="program__item-text">Запускаем внутреннюю и внешнюю рекламу на карточку товара, даем
+                            рекомендации по продвижению товара.
+                            <br> Настраиваем SEO товара под целевую аудиторию, рассказываем какими инструментами
+                            пользуемся</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="prices">
+            <div class="prices__container">
+                <h2 class="prices__title">Тарифы</h2>
+                <h4 class="prices__subtitle">Выберите подходящую вам программу</h4>
+                <div class="prices__content">
+                    <div class="prices__content-btns prices__btns">
+                        <button class="prices__btns-item" data-program="programStart">Программа для старта</button>
+                        <button class="prices__btns-item profit active" data-program="programStableGrowth">Стабильный
+                            рост</button>
+                        <button class="prices__btns-item" data-program="programAllInclusive">Все включено</button>
+                    </div>
+                    <div id="programStart" class="prices__content-text prices__program">
+                        <h3 class="prices__program-title">Что вы получите при покупке <span class="name">«Программа для старта»</span><br><span
+                            class="price">Цена: <span class="price-num">45.000₽</span></span></h3>
+                        <ul class="prices__program-list">
+                            <li class="prices__program-list_item">Создание магазина на Wildberries или Ozon</li>
+                            <li class="prices__program-list_item">Подбор актуального товара для продажи + калькулятор
+                                себестоимости
+                            </li>
+                            <li class="prices__program-list_item">Обучение в видео-уроках каждому шагу</li>
+                            <li class="prices__program-list_item">Заказ товара из Китая</li>
+                            <li class="prices__program-list_item">Создание карточки товара (до 3х штук)</li>
+                            <li class="prices__program-list_item">Организация фотосессии</li>
+                            <li class="prices__program-list_item">Передача контактов для заказа товара и ключей
+                                управления магазином
+                            </li>
+                        </ul>
+                        <button data-open=".buy" class="prices__program-btn">Оставить заявку</button>
+                    </div>
+                    <div id="programStableGrowth" class="prices__content-text prices__program active">
+                        <h3 class="prices__program-title">Что вы получите при покупке <span class="name">«Стабильный рост»</span><br><span
+                            class="price">Цена: <span class="price-num">85.000₽</span></span></h3>
+                        <ul class="prices__program-list">
+                            <li class="prices__program-list_item">Создание магазина на Wildberries или Ozon</li>
+                            <li class="prices__program-list_item">Подбор и согласование актуального товара (до 10
+                                артикулов) + калькулятор себестоимости
+                            </li>
+                            <li class="prices__program-list_item">Обучение в видео-уроках каждому шагу</li>
+                            <li class="prices__program-list_item">Заказ товара из Китая</li>
+                            <li class="prices__program-list_item">Фотографии с инфографикой до 3х артикулов</li>
+                            <li class="prices__program-list_item">Упаковка до 100 единиц</li>
+                            <li class="prices__program-list_item">Доставка до 100 единиц</li>
+                            <li class="prices__program-list_item">Создание карточки товара (до 10 артикулов)</li>
+                            <li class="prices__program-list_item">Индивидуальная SEO оптимизация каждой карточки</li>
+                            <li class="prices__program-list_item">Настройка эффективных рекламных компаний</li>
+                            <li class="prices__program-list_item">Техническая поддержка на протяжении 2х месяцев после
+                                поставки
+                            </li>
+                            <li class="prices__program-list_item">Передача контактов для заказа товара и ключей
+                                управления магазином
+                            </li>
+                        </ul>
+                        <button data-open=".buy" class="prices__program-btn">Оставить заявку</button>
+                    </div>
+                    <div id="programAllInclusive" class="prices__content-text prices__program">
+                        <h3 class="prices__program-title">Что вы получите при покупке <span
+                            class="name">«Всё включено»</span><br><span
+                            class="price">Цена: <span class="price-num">150.000₽</span></span></h3>
+                        <ul class="prices__program-list">
+                            <li class="prices__program-list_item">Создание магазина на Wildberries или Ozon</li>
+                            <li class="prices__program-list_item">Подбор и согласование актуального товара (до 20
+                                артикулов) + калькулятор себестоимости
+                            </li>
+                            <li class="prices__program-list_item">Обучение в видео-уроках каждому шагу</li>
+                            <li class="prices__program-list_item">Заказ товара из Китая</li>
+                            <li class="prices__program-list_item">Фотографии с инфографикой до 6 артикулов</li>
+                            <li class="prices__program-list_item">Упаковка до 300 единиц</li>
+                            <li class="prices__program-list_item">Доставка до 300 единиц</li>
+                            <li class="prices__program-list_item">Создание карточки товара (до 20 артикулов)</li>
+                            <li class="prices__program-list_item">Индивидуальная SEO оптимизация каждой карточки</li>
+                            <li class="prices__program-list_item">Настройка эффективных рекламных компаний</li>
+                            <li class="prices__program-list_item">Организация самовыкупов</li>
+                            <li class="prices__program-list_item">Передача контактов для заказа товара и ключей
+                                управления магазином
+                            </li>
+                            <li class="prices__program-list_item">Ведение кабинета 1 месяц после поставки товара и
+                                контроль остатков
+                            </li>
+                            <li class="prices__program-list_item">Бессрочная техническая поддержка</li>
+                            <li class="prices__program-list_item">Подключение к системе аналитики MPSTATS</li>
+                        </ul>
+                        <button data-open=".buy" class="prices__program-btn">Оставить заявку</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__top">
+                <div class="footer__top-left">
+                    <a href="/" class="footer__top-left_logo"><img src="img/logo_white.svg" alt="Логотип"></a>
+                    <p class="footer__top-left_description">Открытие и продвижение магазинов на маркетплейсах</p>
+                </div>
+                <div class="footer__top-right">
+                    <h5 class="footer__top-right_title">Связаться со мной</h5>
+                    <ul class="footer__top-right_contacts footer__contacts">
+                        <li class="footer__contacts-item"><a href="tel:+79933383201">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="28" viewBox="0 0 27 28"
+                                 fill="none">
+                                <path
+                                    d="M20.3821 27.0503C18.9604 27.0503 17.4632 26.7106 15.9157 26.0564C14.4059 25.4147 12.8835 24.534 11.3989 23.4646C9.92684 22.3826 8.50513 21.1747 7.1589 19.8537C5.82526 18.5075 4.61743 17.0857 3.548 15.6263C2.46598 14.1165 1.59786 12.6067 0.981361 11.1473C0.32712 9.58714 0 8.07735 0 6.65564C0 5.67428 0.176142 4.74324 0.515843 3.87512C0.868127 2.98183 1.4343 2.15144 2.20177 1.4343C3.17055 0.478099 4.27773 0 5.46039 0C5.95107 0 6.45433 0.113234 6.88211 0.314539C7.37279 0.541007 7.78798 0.880708 8.08993 1.33364L11.0089 5.44781C11.2731 5.81268 11.4744 6.16496 11.6128 6.51724C11.7763 6.89469 11.8644 7.27214 11.8644 7.637C11.8644 8.1151 11.726 8.58062 11.4618 9.02097C11.2731 9.36067 10.9837 9.72554 10.6188 10.0904L9.76328 10.9837C9.77586 11.0214 9.78844 11.0466 9.80103 11.0718C9.952 11.336 10.254 11.7889 10.8327 12.4683C11.4492 13.1729 12.028 13.8145 12.6067 14.4059C13.349 15.1356 13.9655 15.7144 14.5443 16.1925C15.2614 16.7964 15.7269 17.0983 16.0037 17.2367L15.9786 17.2996L16.897 16.3938C17.287 16.0037 17.6645 15.7144 18.0294 15.5256C18.7213 15.0979 19.6021 15.0224 20.4828 15.3872C20.8099 15.5256 21.1622 15.7144 21.5396 15.9786L25.7167 18.9478C26.1822 19.2624 26.5219 19.665 26.7232 20.1431C26.9119 20.6212 27 21.0615 27 21.5019C27 22.1058 26.8616 22.7097 26.5974 23.2759C26.3332 23.842 26.0061 24.3327 25.5909 24.7857C24.8737 25.5783 24.0937 26.1445 23.1878 26.5093C22.3197 26.8616 21.3761 27.0503 20.3821 27.0503ZM5.46039 1.88723C4.76841 1.88723 4.12675 2.18919 3.51025 2.7931C2.9315 3.33411 2.52889 3.92544 2.27726 4.5671C2.01305 5.22134 1.88723 5.91333 1.88723 6.65564C1.88723 7.82572 2.16403 9.09646 2.71761 10.4049C3.28378 11.7386 4.07642 13.1226 5.08295 14.5065C6.08947 15.8905 7.23439 17.2367 8.49254 18.5075C9.7507 19.753 11.1095 20.9105 12.5061 21.9296C13.8649 22.9236 15.2614 23.7288 16.6454 24.3076C18.7968 25.226 20.8099 25.4399 22.4706 24.7479C23.1123 24.4837 23.6785 24.0811 24.1943 23.5023C24.4837 23.1878 24.7102 22.8481 24.8989 22.4455C25.0499 22.1309 25.1253 21.8038 25.1253 21.4767C25.1253 21.2754 25.0876 21.0741 24.987 20.8476C24.9492 20.7721 24.8737 20.6337 24.6347 20.4702L20.4576 17.5009C20.206 17.3248 19.9795 17.199 19.7656 17.1109C19.4888 16.9977 19.3756 16.8844 18.9478 17.1487C18.6962 17.2745 18.4697 17.4632 18.2181 17.7148L17.2619 18.6584C16.7712 19.1365 16.0163 19.2498 15.4376 19.0359L15.0979 18.8849C14.582 18.6081 13.9781 18.1803 13.3113 17.6142C12.7074 17.0983 12.0531 16.4944 11.2605 15.7144C10.644 15.0853 10.0275 14.4185 9.38583 13.6761C8.7945 12.9842 8.36673 12.3928 8.10252 11.9021L7.95154 11.5247C7.87605 11.2353 7.85089 11.0718 7.85089 10.8956C7.85089 10.4427 8.01445 10.0401 8.32898 9.72554L9.2726 8.74418C9.52423 8.49255 9.71295 8.2535 9.83877 8.03961C9.93942 7.87605 9.97717 7.73765 9.97717 7.61184C9.97717 7.51118 9.93942 7.36021 9.87652 7.20923C9.78844 7.00792 9.65005 6.78145 9.4739 6.54241L6.55499 2.41566C6.42917 2.23952 6.27819 2.1137 6.08947 2.02563C5.88816 1.93756 5.67428 1.88723 5.46039 1.88723ZM15.9786 17.3122L15.7773 18.1678L16.117 17.287C16.0541 17.2745 16.0037 17.287 15.9786 17.3122Z"
+                                    fill="#E2F3E5"/>
+                            </svg>
+                            +7 (993) 338-32-01
+                        </a></li>
+                        <li class="footer__contacts-item"><a href="tel:+79154288768">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="28" viewBox="0 0 27 28"
+                                 fill="none">
+                                <path
+                                    d="M20.3821 27.0503C18.9604 27.0503 17.4632 26.7106 15.9157 26.0564C14.4059 25.4147 12.8835 24.534 11.3989 23.4646C9.92684 22.3826 8.50513 21.1747 7.1589 19.8537C5.82526 18.5075 4.61743 17.0857 3.548 15.6263C2.46598 14.1165 1.59786 12.6067 0.981361 11.1473C0.32712 9.58714 0 8.07735 0 6.65564C0 5.67428 0.176142 4.74324 0.515843 3.87512C0.868127 2.98183 1.4343 2.15144 2.20177 1.4343C3.17055 0.478099 4.27773 0 5.46039 0C5.95107 0 6.45433 0.113234 6.88211 0.314539C7.37279 0.541007 7.78798 0.880708 8.08993 1.33364L11.0089 5.44781C11.2731 5.81268 11.4744 6.16496 11.6128 6.51724C11.7763 6.89469 11.8644 7.27214 11.8644 7.637C11.8644 8.1151 11.726 8.58062 11.4618 9.02097C11.2731 9.36067 10.9837 9.72554 10.6188 10.0904L9.76328 10.9837C9.77586 11.0214 9.78844 11.0466 9.80103 11.0718C9.952 11.336 10.254 11.7889 10.8327 12.4683C11.4492 13.1729 12.028 13.8145 12.6067 14.4059C13.349 15.1356 13.9655 15.7144 14.5443 16.1925C15.2614 16.7964 15.7269 17.0983 16.0037 17.2367L15.9786 17.2996L16.897 16.3938C17.287 16.0037 17.6645 15.7144 18.0294 15.5256C18.7213 15.0979 19.6021 15.0224 20.4828 15.3872C20.8099 15.5256 21.1622 15.7144 21.5396 15.9786L25.7167 18.9478C26.1822 19.2624 26.5219 19.665 26.7232 20.1431C26.9119 20.6212 27 21.0615 27 21.5019C27 22.1058 26.8616 22.7097 26.5974 23.2759C26.3332 23.842 26.0061 24.3327 25.5909 24.7857C24.8737 25.5783 24.0937 26.1445 23.1878 26.5093C22.3197 26.8616 21.3761 27.0503 20.3821 27.0503ZM5.46039 1.88723C4.76841 1.88723 4.12675 2.18919 3.51025 2.7931C2.9315 3.33411 2.52889 3.92544 2.27726 4.5671C2.01305 5.22134 1.88723 5.91333 1.88723 6.65564C1.88723 7.82572 2.16403 9.09646 2.71761 10.4049C3.28378 11.7386 4.07642 13.1226 5.08295 14.5065C6.08947 15.8905 7.23439 17.2367 8.49254 18.5075C9.7507 19.753 11.1095 20.9105 12.5061 21.9296C13.8649 22.9236 15.2614 23.7288 16.6454 24.3076C18.7968 25.226 20.8099 25.4399 22.4706 24.7479C23.1123 24.4837 23.6785 24.0811 24.1943 23.5023C24.4837 23.1878 24.7102 22.8481 24.8989 22.4455C25.0499 22.1309 25.1253 21.8038 25.1253 21.4767C25.1253 21.2754 25.0876 21.0741 24.987 20.8476C24.9492 20.7721 24.8737 20.6337 24.6347 20.4702L20.4576 17.5009C20.206 17.3248 19.9795 17.199 19.7656 17.1109C19.4888 16.9977 19.3756 16.8844 18.9478 17.1487C18.6962 17.2745 18.4697 17.4632 18.2181 17.7148L17.2619 18.6584C16.7712 19.1365 16.0163 19.2498 15.4376 19.0359L15.0979 18.8849C14.582 18.6081 13.9781 18.1803 13.3113 17.6142C12.7074 17.0983 12.0531 16.4944 11.2605 15.7144C10.644 15.0853 10.0275 14.4185 9.38583 13.6761C8.7945 12.9842 8.36673 12.3928 8.10252 11.9021L7.95154 11.5247C7.87605 11.2353 7.85089 11.0718 7.85089 10.8956C7.85089 10.4427 8.01445 10.0401 8.32898 9.72554L9.2726 8.74418C9.52423 8.49255 9.71295 8.2535 9.83877 8.03961C9.93942 7.87605 9.97717 7.73765 9.97717 7.61184C9.97717 7.51118 9.93942 7.36021 9.87652 7.20923C9.78844 7.00792 9.65005 6.78145 9.4739 6.54241L6.55499 2.41566C6.42917 2.23952 6.27819 2.1137 6.08947 2.02563C5.88816 1.93756 5.67428 1.88723 5.46039 1.88723ZM15.9786 17.3122L15.7773 18.1678L16.117 17.287C16.0541 17.2745 16.0037 17.287 15.9786 17.3122Z"
+                                    fill="#E2F3E5"/>
+                            </svg>
+                            +7 (915) 428-87-68
+                        </a></li>
+                        <li class="footer__contacts-item"><a target="_blank" href="https://t.me/Wbonlinee">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                                 fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M31.856 6.645L27.64 26.948C27.182 29.1985 25.661 30 24.3895 30C23.7335 30 23.0525 29.8035 22.3635 29.4145L22.249 29.349L22.142 29.269L13.375 22.651L13.0455 26.5185C12.8735 27.422 12.0515 28.071 11.116 27.994C10.397 27.9345 9.81398 27.464 9.57048 26.834L8.10748 22.4415C8.04048 22.3065 7.99998 22.1585 7.99998 22C7.99998 21.4475 8.44748 21 8.99998 21C9.43648 21 9.80248 21.28 9.93948 21.669C9.94048 21.669 9.94198 21.668 9.94298 21.6665L11.144 25.274L11.32 23.2095C11.32 23.207 11.32 23.207 11.32 23.206C11.429 21.8835 12.589 20.8995 13.9115 21.008C14.348 21.043 14.7445 21.1985 15.079 21.4315L23.3465 27.6725C23.7315 27.8895 24.0815 27.9995 24.3895 27.9995C25.028 27.9995 25.4815 27.5245 25.68 26.549L29.904 6.208C30.249 4.798 29.6245 4 28.784 4C28.5695 4 28.3415 4.052 28.11 4.1585L3.30799 13.932C1.61449 14.6265 1.62449 15.591 2.99899 16.0205L7.09848 17.3285C7.09948 17.3285 7.10348 17.326 7.10448 17.327C7.38548 17.4145 7.70198 17.384 7.97098 17.2155C7.97599 17.213 7.97949 17.214 7.98398 17.2115L18.953 10.299C19.8825 9.726 21.1035 10.0035 21.69 10.9295C22.1885 11.716 22.0655 12.715 21.456 13.3645L15.707 19.113V19.114L15.6915 19.1285L15.6905 19.1275C15.511 19.2995 15.2685 19.4065 15.001 19.4065C14.4485 19.4065 14.001 18.959 14.001 18.4065C14.001 18.1385 14.1075 17.896 14.28 17.7165L14.279 17.7155L19.976 12.0175L9.00748 18.9295C8.22448 19.4045 7.30948 19.4895 6.49598 19.2315C6.48998 19.229 6.48398 19.2315 6.47748 19.229L2.40248 17.9295C0.254985 17.258 0.0229852 15.7015 0.00248515 15.241C-0.0300148 14.465 0.255485 13.022 2.54899 12.081L2.56099 12.076L2.57398 12.071L27.3315 2.316C27.805 2.1065 28.2935 2 28.784 2C29.7635 2 30.667 2.435 31.263 3.1955C31.963 4.085 32.1725 5.309 31.856 6.645ZM15 25C15.5525 25 16 25.4475 16 26C16 26.5525 15.5525 27 15 27C14.4475 27 14 26.5525 14 26C14 25.4475 14.4475 25 15 25Z"
+                                      fill="#E2E9F3"/>
+                            </svg>
+                            @Wbonlinee
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__bottom-copyright">© 2023, mponlinee.pro</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<div class="popup callback">
+    <div class="popup__close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="37" viewBox="0 0 38 37" fill="none">
+            <rect x="1.6759" y="0.468781" width="50" height="1" transform="rotate(45 1.6759 0.468781)" fill="#D9D9D9"/>
+            <rect x="37.0625" y="0.707108" width="50" height="1" transform="rotate(135 37.0625 0.707108)"
+                  fill="#D9D9D9"/>
+        </svg>
+    </div>
+    <div class="popup__container">
+        <h2 class="popup__title callback__title">Оставьте заявку на бесплатную консультацию и мы свяжемся с вами в
+            ближайшее время</h2>
+        <form action="javascript:void(0)" class="popup__form callback__form">
+            <div class="popup__form-inputs callback__form-inputs">
+                <input type="text" name="name" class="popup__form-input callback__form-input" placeholder="Ваше имя"
+                       required>
+                <input type="text" name="phone" class="popup__form-input callback__form-input"
+                       placeholder="Ваш телефон" required>
+            </div>
+            <button class="popup__form-btn callback__form-btn">Отправить</button>
+        </form>
+    </div>
+</div>
+
+<div class="popup buy">
+    <div class="popup__close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="37" viewBox="0 0 38 37" fill="none">
+            <rect x="1.6759" y="0.468781" width="50" height="1" transform="rotate(45 1.6759 0.468781)" fill="#D9D9D9"/>
+            <rect x="37.0625" y="0.707108" width="50" height="1" transform="rotate(135 37.0625 0.707108)"
+                  fill="#D9D9D9"/>
+        </svg>
+    </div>
+    <div class="popup__container">
+        <h2 class="popup__title buy__title">Оставьте заявку для покупки программы и мы свяжемся с вами в ближайшее
+            время</h2>
+        <form action="javascript:void(0)" class="popup__form buy__form">
+            <div class="popup__form-inputs buy__form-inputs">
+                <input type="text" name="name" class="popup__form-input buy__form-input" placeholder="Ваше имя"
+                       required>
+                <input type="text" name="phone" class="popup__form-input buy__form-input"
+                       placeholder="Ваш телефон" required>
+            </div>
+            <div class="buy__program">
+                    <p class="buy__program-name" id="popupProgramName">Программа: <br>«<span></span>»</p>
+                </div>
+            <button class="popup__form-btn buy__form-btn">Отправить</button>
+            <div class="buy__form-banner">
+                <img src="img/tinkoff.svg" alt="Тинькофф">
+                <span>от 3390 руб. Без % в рассрочку от Тинькофф и МТС банка</span>
+                <img src="img/mts.svg" alt="МТС">
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="popup success">
+    <div class="popup__container">
+        <h2 class="popup__title success__title">Спасибо за заявку!<br>Наш менеджер свяжется с вами в ближайшее время</h2>
+        <img class="success__img" src="img/check.svg" alt="Успешно отправлено">
+        <button class="success__btn popup__close">Закрыть</button>
+    </div>
+</div>
+</body>
+</html>
